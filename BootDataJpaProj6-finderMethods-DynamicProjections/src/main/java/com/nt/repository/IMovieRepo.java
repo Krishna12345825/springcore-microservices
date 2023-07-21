@@ -10,8 +10,7 @@ import com.nt.view.View;
 
 public interface IMovieRepo extends JpaRepository<Movie, Integer> {
 	
-	public <T extends View> Iterable<T>  findByMnameIn(List<String> movies,
-			                                                                                                     Class<T> clazz);
+	public <T extends View> Iterable<T>  findByMnameIn(List<String> movies, Class<T> clazz);
 	
 	
 
