@@ -41,18 +41,12 @@ public interface IMovieRepo extends JpaRepository<Movie, Integer> {
 			public  Iterable<Movie> findByMidGreaterThanAndRatingLessThan(int startMid, float endRatings);
 			
 			//select mid,mname,year,ratings from Movie where Mname like 'R%' or  (ratings between 3.0 and 5.0)
-			public Iterable<Movie> findByMnameStartingWithOrRatingBetween(String mnameChars,
-					                                                                                                                             float startRating,
-					                                                                                                                             float endRatings);
+			public Iterable<Movie> findByMnameStartingWithOrRatingBetween(String mnameChars,float startRating,float endRatings);
 			
 			           //select mid,mname,year,ratings from Movie where year in (? , ?) or (upper(mname) like upper(?) escape ?) and (ratings between ? and ?)
-			public Iterable<Movie> findByYearInOrMnameContainingIgnoreCaseAndRatingBetween(List<String> years,
-					                                                                                                                                                                     String chars,
-					                                                                                                                                                              float startRatings,
-					                                                                                                                                                              float endRatings);
+			public Iterable<Movie> findByYearInOrMnameContainingIgnoreCaseAndRatingBetween(List<String> years,  String chars,float startRatings,float endRatings);
 			//select mid,mname,year,ratings from Movie where (mname not like ? escape ?) and (year in (? , ?)) order by mname asc
-			public Iterable<Movie> findByMnameNotLikeAndYearInOrderByMnameAsc(String letters,
-					                                                                                                                                                          List<String> years);
+			public Iterable<Movie> findByMnameNotLikeAndYearInOrderByMnameAsc(String letters,List<String> years);
 					                                                                                                                                                          
 			
 			
