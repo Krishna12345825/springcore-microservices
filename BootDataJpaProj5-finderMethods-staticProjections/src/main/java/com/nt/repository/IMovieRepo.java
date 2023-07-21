@@ -11,5 +11,5 @@ public interface IMovieRepo extends JpaRepository<Movie, Integer> {
 	public  Iterable<ResultView>  findByMidGreaterThanEqualAndMidLessThanEqual(int startMid,int endMid);
 	
 	
-
+	
 }
