@@ -18,9 +18,11 @@ import lombok.Data;
 @Table(name="emp")
 @Data
 public class Employee  implements Serializable {
+//	@Id
+//	@SequenceGenerator(name = "gen1",sequenceName = "emp_id_seq",allocationSize = 1, initialValue = 1)
+//	@GeneratedValue(generator = "gen1",strategy = GenerationType.SEQUENCE)
 	@Id
-	@SequenceGenerator(name = "gen1",sequenceName = "emp_id_seq",allocationSize = 1, initialValue = 1)
-	@GeneratedValue(generator = "gen1",strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer empno;
 	@Column(length = 20)
 	private  String ename;

@@ -12,7 +12,7 @@ public class EmployeeValidator implements Validator {
 	@Override
 	public boolean supports(Class<?> clazz) {
 		return clazz.isAssignableFrom(Employee.class);  //checks wheather we are passing
-		                                                                                   //correct model class or not
+		                                                       //correct model class or not
 	}
 
 	@Override
