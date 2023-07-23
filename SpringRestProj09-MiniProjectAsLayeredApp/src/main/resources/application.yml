@@ -10,7 +10,7 @@ spring:
       maximum-pool-size: 100
       minimum-idle: 10
     password: root
-    url: jdbc:mysql:///ntspbms615db
+    url: jdbc:mysql:///jpa
     username: root
   jpa:
     database-platform: org.hibernate.dialect.MySQL8Dialect
